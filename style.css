@@ -1,0 +1,455 @@
+/* 
+  Desarrollado por: Jesús Alfredo Altamirano Torres
+  Proyecto: Asociados Altamirano
+  Todos los derechos reservados.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: rgba(24, 24, 24, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #2a2a2a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+.btn-primary {
+    background-color: #d4af37;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #b8972e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp-submit {
+    background-color: #25D366;
+    color: #ffffff;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp-submit:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.hero {
+    position: relative;
+    padding: 130px 0;
+    background-color: #121212;
+    overflow: hidden;
+    text-align: left;
+}
+
+.hero-image-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-image-bg img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.55;
+    transition: transform 0.5s ease;
+}
+
+.hero:hover .hero-image-bg img {
+    transform: scale(1.02);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #121212 35%, rgba(18, 18, 18, 0.5) 75%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 700px;
+}
+
+.sub-heading {
+    color: #d4af37;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #b0b0b0;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.servicios-section {
+    padding: 80px 0;
+    background-color: #161616;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #999;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card-servicio {
+    background-color: #1c1c1c;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-servicio:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.card-body {
+    padding: 30px 20px;
+}
+
+.card-body h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card-body p {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.link-card {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.link-card:hover {
+    color: #d4af37;
+}
+
+.nosotros-section {
+    padding: 80px 0;
+}
+
+.grid-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.nosotros-img img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.nosotros-text h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.nosotros-text p {
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+
+.check-list {
+    list-style: none;
+}
+
+.check-list li {
+    margin-bottom: 10px;
+    color: #d0d0d0;
+}
+
+.check-list i {
+    color: #d4af37;
+    margin-right: 10px;
+}
+
+.contacto-section {
+    padding: 80px 0;
+    background-color: #161616;
+}
+
+.form-wrapper {
+    background-color: #1c1c1c;
+    border: 1px solid #2a2a2a;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.form-wrapper h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-wrapper p {
+    color: #999;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d0d0d0;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #121212;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #ffffff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: #d4af37;
+    outline: none;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+.footer {
+    background-color: #0d0d0d;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+.btn-whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    z-index: 99;
+    transition: transform 0.3s ease, background 0.3s;
+}
+
+.btn-whatsapp-float:hover {
+    transform: scale(1.08);
+    background-color: #1ebe5d;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #1c1c1c;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    border: 1px solid #333;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: white;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

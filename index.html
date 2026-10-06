@@ -1,0 +1,202 @@
+<!-- 
+  ======================================================
+  PROPIEDAD INTELECTUAL Y DESARROLLO
+  Desarrollado por: Jesús Alfredo Altamirano Torres
+  Proyecto: Landing Page Asociados Altamirano
+  Todos los derechos reservados.
+  ======================================================
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altamirano Asociados | Asesoría y Representación Legal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-author="Jesús Alfredo Altamirano Torres">
+
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#">Altamirano Y Asociados</a>
+            </div>
+            <nav class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <button class="btn-primary open-modal">Agendar consulta</button>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-image-bg">
+            <img src="img/1.png" alt="León Altamirano Asociados">
+        </div>
+
+        <div class="container hero-content">
+            <span class="sub-heading">ASESORÍA Y REPRESENTACIÓN LEGAL</span>
+            <h1>Soluciones legales con experiencia y compromiso.</h1>
+            <p>Atención jurídica profesional para proteger tus derechos, resolver conflictos y encontrar la mejor solución para cada situación.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary open-modal">Agendar consulta</button>
+                <a href="#servicios" class="btn-secondary">Conocer servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS SIN IMÁGENES (SOLO TEXTO Y DISEÑO LIMPIO) -->
+    <section id="servicios" class="servicios-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios Legales</h2>
+                <p>Especialistas en diversas áreas del derecho para dar respuesta oportuna a tus necesidades.</p>
+            </div>
+            <div class="grid-servicios">
+                <div class="card-servicio">
+                    <div class="card-body">
+                        <h3>Derecho Familiar</h3>
+                        <p>Divorcios, pensiones alimenticias, custodia de menores y procesos sucesorios con trato humano e integral.</p>
+                        <a href="#contacto" class="link-card">Consultar &rarr;</a>
+                    </div>
+                </div>
+                <div class="card-servicio">
+                    <div class="card-body">
+                        <h3>Derecho Civil</h3>
+                        <p>Elaboración y revisión de contratos, litigios de propiedad, arrendamientos y recuperación de cartera de adeudos.</p>
+                        <a href="#contacto" class="link-card">Consultar &rarr;</a>
+                    </div>
+                </div>
+                <div class="card-servicio">
+                    <div class="card-body">
+                        <h3>Derecho Laboral</h3>
+                        <p>Defensa ante despidos injustificados, liquidaciones, finiquitos y demandas ante tribunales laborales.</p>
+                        <a href="#contacto" class="link-card">Consultar &rarr;</a>
+                    </div>
+                </div>
+                <div class="card-servicio">
+                    <div class="card-body">
+                        <h3>Derecho Mercantil</h3>
+                        <p>Cobro de pagarés, títulos de crédito, contratos comerciales, disputas entre socios y asesoría a empresas.</p>
+                        <a href="#contacto" class="link-card">Consultar &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="nosotros-section">
+        <div class="container grid-nosotros">
+            <div class="nosotros-img">
+                <img src="img/2.png" alt="Abogado Principal">
+            </div>
+            <div class="nosotros-text">
+                <h2>Compromiso, Ética y Resultados</h2>
+                <p>Nos dedicamos a brindar representación jurídica de alta calidad, evaluando detalladamente cada caso para ofrecer estrategias sólidas y efectivas.</p>
+                <ul class="check-list">
+                    <li><i class="fa-solid fa-check"></i> Atención personalizada e individualizada.</li>
+                    <li><i class="fa-solid fa-check"></i> Transparencia en cada etapa del proceso legal.</li>
+                    <li><i class="fa-solid fa-check"></i> Amplia trayectoria y casos de éxito.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <h2>Agendar Consulta Legal</h2>
+                <p>Envíanos tus datos y horario preferido para coordinar tu atención personalizada por WhatsApp.</p>
+                
+                <form id="agenda-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / WhatsApp *</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="222 123 4567" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="area">Área de Interés *</label>
+                            <select id="area" name="area" required>
+                                <option value="" disabled selected>Selecciona un área</option>
+                                <option value="Derecho Familiar">Derecho Familiar</option>
+                                <option value="Derecho Civil">Derecho Civil</option>
+                                <option value="Derecho Laboral">Derecho Laboral</option>
+                                <option value="Derecho Mercantil">Derecho Mercantil</option>
+                                <option value="Otro">Otro Asunto Legal</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="horario">Horario Preferido (8:00 AM - 6:00 PM) *</label>
+                            <select id="horario" name="horario" required>
+                                <option value="" disabled selected>Selecciona un horario</option>
+                                <option value="08:00 AM - 10:00 AM">Mañana (08:00 AM - 10:00 AM)</option>
+                                <option value="10:00 AM - 12:00 PM">Mañana (10:00 AM - 12:00 PM)</option>
+                                <option value="12:00 PM - 02:00 PM">Mediodía (12:00 PM - 02:00 PM)</option>
+                                <option value="02:00 PM - 04:00 PM">Tarde (02:00 PM - 04:00 PM)</option>
+                                <option value="04:00 PM - 06:00 PM">Tarde (04:00 PM - 06:00 PM)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Detalles o consulta rápida *</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente tu consulta..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-whatsapp-submit">
+                        <i class="fa-brands fa-whatsapp"></i> Agendar por WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Altamirano Asociados. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/522211273217?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios%20legales." class="btn-whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+
+    <div class="modal" id="modal-agenda">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Agendar Consulta Rápida</h3>
+            <p>Envíanos tus datos y nos comunicaremos de inmediato.</p>
+            <form id="modal-form">
+                <div class="form-group">
+                    <label for="modal-nombre">Nombre Completo</label>
+                    <input type="text" id="modal-nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-tel">Teléfono</label>
+                    <input type="tel" id="modal-tel" required>
+                </div>
+                <button type="submit" class="btn-whatsapp-submit">
+                    <i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Número oficial actualizado integrado directamente
+        const numeroWhatsApp = "522211273217";
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
