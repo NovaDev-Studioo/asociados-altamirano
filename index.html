@@ -2,7 +2,7 @@
   ======================================================
   PROPIEDAD INTELECTUAL Y DESARROLLO
   Desarrollado por: Jesús Alfredo Altamirano Torres
-  Proyecto: Landing Page Asociados Altamirano
+  Proyecto: Landing Page Altamirano Asociados
   Todos los derechos reservados.
   ======================================================
 -->
@@ -20,20 +20,21 @@
     <header class="header">
         <div class="container nav-container">
             <div class="logo">
-                <a href="#">Altamirano Y Asociados</a>
+                <a href="#">Altamirano Asociados</a>
             </div>
             <nav class="nav-links">
                 <a href="#inicio">Inicio</a>
                 <a href="#servicios">Servicios</a>
+                <a href="#por-que-elegirnos">¿Por qué elegirnos?</a>
                 <a href="#nosotros">Nosotros</a>
                 <a href="#contacto">Contacto</a>
             </nav>
-            <button class="btn-primary open-modal">Agendar consulta</button>
         </div>
     </header>
 
+    <!-- INICIO / HERO (Foto de fondo centrada detrás del texto) -->
     <section id="inicio" class="hero">
-        <div class="hero-image-bg">
+        <div class="bg-lion-centered">
             <img src="img/1.png" alt="León Altamirano Asociados">
         </div>
 
@@ -42,13 +43,13 @@
             <h1>Soluciones legales con experiencia y compromiso.</h1>
             <p>Atención jurídica profesional para proteger tus derechos, resolver conflictos y encontrar la mejor solución para cada situación.</p>
             <div class="hero-buttons">
-                <button class="btn-primary open-modal">Agendar consulta</button>
+                <a href="#contacto" class="btn-primary">Agendar consulta</a>
                 <a href="#servicios" class="btn-secondary">Conocer servicios</a>
             </div>
         </div>
     </section>
 
-    <!-- SERVICIOS SIN IMÁGENES (SOLO TEXTO Y DISEÑO LIMPIO) -->
+    <!-- SERVICIOS -->
     <section id="servicios" class="servicios-section">
         <div class="container">
             <div class="section-title">
@@ -88,27 +89,65 @@
         </div>
     </section>
 
+    <!-- ¿POR QUÉ ELEGIRNOS? (Foto de fondo centrada detrás de las tarjetas) -->
+    <section id="por-que-elegirnos" class="por-que-section">
+        <div class="bg-lion-centered">
+            <img src="img/1.png" alt="León Emblemático Altamirano">
+        </div>
+
+        <div class="container por-que-content">
+            <div class="section-title">
+                <h2>¿Por qué elegirnos?</h2>
+                <p>Conoce la metodología con la que abordamos cada caso.</p>
+            </div>
+            <div class="grid-razones">
+                <div class="card-razon">
+                    <div class="razon-num">1</div>
+                    <h3>Análisis personalizado</h3>
+                    <p>Analizamos las circunstancias particulares de cada situación antes de plantear alternativas.</p>
+                </div>
+                <div class="card-razon">
+                    <div class="razon-num">2</div>
+                    <h3>Estrategia jurídica</h3>
+                    <p>Te ayudamos a comprender tus opciones y los posibles escenarios para tomar decisiones encaminadas.</p>
+                </div>
+                <div class="card-razon">
+                    <div class="razon-num">3</div>
+                    <h3>Comunicación clara</h3>
+                    <p>Procuramos explicarte cada etapa de manera sencilla y transparente.</p>
+                </div>
+                <div class="card-razon">
+                    <div class="razon-num">4</div>
+                    <h3>Acompañamiento</h3>
+                    <p>No estás solo durante el proceso. Mantenemos comunicación contigo y te orientamos sobre los siguientes pasos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSOTROS (Abogado estático a la IZQUIERDA) -->
     <section id="nosotros" class="nosotros-section">
         <div class="container grid-nosotros">
             <div class="nosotros-img">
-                <img src="img/2.png" alt="Abogado Principal">
+                <img src="img/2.png" alt="Abogado Principal Altamirano Asociados">
             </div>
             <div class="nosotros-text">
                 <h2>Compromiso, Ética y Resultados</h2>
-                <p>Nos dedicamos a brindar representación jurídica de alta calidad, evaluando detalladamente cada caso para ofrecer estrategias sólidas y efectivas.</p>
+                <p>En Altamirano y Asociados sabemos que detrás de cada asunto jurídico existe una persona, una familia, un patrimonio o un proyecto que merece ser protegido.</p>
                 <ul class="check-list">
                     <li><i class="fa-solid fa-check"></i> Atención personalizada e individualizada.</li>
                     <li><i class="fa-solid fa-check"></i> Transparencia en cada etapa del proceso legal.</li>
-                    <li><i class="fa-solid fa-check"></i> Amplia trayectoria y casos de éxito.</li>
+                    <li><i class="fa-solid fa-check"></i> Nuestro compromiso: escuchar, analizar, orientar, defender.</li>
                 </ul>
             </div>
         </div>
     </section>
 
+    <!-- FORMULARIO DE CONTACTO -->
     <section id="contacto" class="contacto-section">
         <div class="container">
             <div class="form-wrapper">
-                <h2>Agendar Consulta Legal</h2>
+                <h2>Solicitar Asesoría</h2>
                 <p>Envíanos tus datos y horario preferido para coordinar tu atención personalizada por WhatsApp.</p>
                 
                 <form id="agenda-form">
@@ -120,7 +159,7 @@
 
                         <div class="form-group">
                             <label for="telefono">Teléfono / WhatsApp *</label>
-                            <input type="tel" id="telefono" name="telefono" placeholder="222 123 4567" required>
+                            <input type="tel" id="telefono" name="telefono" placeholder="221 127 3217" required>
                         </div>
 
                         <div class="form-group">
@@ -154,7 +193,7 @@
                     </div>
 
                     <button type="submit" class="btn-whatsapp-submit">
-                        <i class="fa-brands fa-whatsapp"></i> Agendar por WhatsApp
+                        <i class="fa-brands fa-whatsapp"></i> Solicitar Asesoría por WhatsApp
                     </button>
                 </form>
             </div>
@@ -167,34 +206,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/522211273217?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios%20legales." class="btn-whatsapp-float" target="_blank" aria-label="WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span>WhatsApp</span>
-    </a>
-
-    <div class="modal" id="modal-agenda">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3>Agendar Consulta Rápida</h3>
-            <p>Envíanos tus datos y nos comunicaremos de inmediato.</p>
-            <form id="modal-form">
-                <div class="form-group">
-                    <label for="modal-nombre">Nombre Completo</label>
-                    <input type="text" id="modal-nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="modal-tel">Teléfono</label>
-                    <input type="tel" id="modal-tel" required>
-                </div>
-                <button type="submit" class="btn-whatsapp-submit">
-                    <i class="fa-brands fa-whatsapp"></i> Enviar por WhatsApp
-                </button>
-            </form>
-        </div>
-    </div>
-
     <script>
-        // Número oficial actualizado integrado directamente
         const numeroWhatsApp = "522211273217";
     </script>
     <script src="script.js"></script>
