@@ -74,16 +74,16 @@ body {
     color: var(--accent-gold);
 }
 
-/* ESTILO REUTILIZABLE DE IMAGEN DEL LEÓN CENTRADA DE FONDO */
+/* IMAGEN DEL LEÓN CENTRADA DE FONDO CON MAYOR VISIBILIDAD */
 .bg-lion-centered {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 750px;
-    height: 90%;
-    opacity: 0.22;
+    max-width: 800px;
+    height: 95%;
+    opacity: 0.45; /* Aumentado para que el león se note más claro */
     pointer-events: none;
     display: flex;
     justify-content: center;
@@ -96,6 +96,7 @@ body {
     height: 100%;
     object-fit: contain;
     object-position: center;
+    filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.2)); /* Brillo sutil dorado */
 }
 
 /* HERO SECTION */
@@ -196,10 +197,10 @@ body {
     color: var(--text-gray);
 }
 
-/* SERVICIOS */
+/* SERVICIOS (GRID PARA 6 OPCIONES) */
 .grid-servicios {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.8rem;
 }
 
@@ -429,7 +430,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* RESPONSIVE DESIGN (TELÉFONOS Y TABLETS) */
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .hero {
         padding: 4rem 0;
@@ -454,7 +455,7 @@ body {
         text-align: center;
     }
 
-    .grid-razones, .grid-nosotros, .form-grid {
+    .grid-servicios, .grid-razones, .grid-nosotros, .form-grid {
         grid-template-columns: 1fr;
     }
 
@@ -483,6 +484,6 @@ body {
     }
 
     .bg-lion-centered {
-        opacity: 0.15;
+        opacity: 0.30;
     }
 }
