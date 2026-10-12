@@ -17,12 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const horario = document.getElementById('horario').value;
             const mensaje = document.getElementById('mensaje').value;
 
-            const textoWhatsApp = `*NUEVA CONSULTA DESDE LA WEB*%0A%0A` +
-                `*Nombre:* ${encodeURIComponent(nombre)}%0A` +
-                `*Teléfono:* ${encodeURIComponent(telefono)}%0A` +
-                `*Área de Interés:* ${encodeURIComponent(area)}%0A` +
-                `*Horario Preferido:* ${encodeURIComponent(horario)}%0A` +
-                `*Consulta:* ${encodeURIComponent(mensaje)}`;
+            // Mensaje corto y directo
+            const textoWhatsApp = 
+                `Hola, me gustaría agendar una asesoría legal.%0A%0A` +
+                `• Nombre: ${encodeURIComponent(nombre)}%0A` +
+                `• Teléfono: ${encodeURIComponent(telefono)}%0A` +
+                `• Área: ${encodeURIComponent(area)}%0A` +
+                `• Horario: ${encodeURIComponent(horario)}%0A` +
+                `• Consulta: ${encodeURIComponent(mensaje)}`;
 
             const targetNumber = typeof numeroWhatsApp !== 'undefined' ? numeroWhatsApp : "522211273217";
             const url = `https://wa.me/${targetNumber}?text=${textoWhatsApp}`;
